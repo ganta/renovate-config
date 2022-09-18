@@ -5,13 +5,13 @@
   lockFileMaintenance: {
     enabled: true,
     // When using Renovate for GitHub, the server is busy on the first day of the month.
-    schedule: ["before 5am on the last day of the month"],
+    schedule: ["before 5am on the 15th day of the month"],
   },
   packageRules: [
     {
       groupName: "React",
       groupSlug: "react",
-      matchManagers: ["npm", "yarn", "pnpm"],
+      matchManagers: ["npm"],
       matchPackageNames: [
         "react",
         "react-dom",
@@ -27,6 +27,7 @@
       matchStrings: ["^nodejs (?<currentValue>.*)\\n"],
       depNameTemplate: "nodejs/node",
       versioningTemplate: "node",
+      datasourceTemplate: "node",
     },
   ],
 }
