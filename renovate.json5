@@ -1,4 +1,31 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["github>ganta/renovate-config-presets"],
+  extends: ["config:base"],
+  labels: ["renovate", "dependencies"],
+  lockFileMaintenance: {
+    enabled: true,
+  },
+  packageRules: [
+    {
+      groupName: "React",
+      groupSlug: "react",
+      matchManagers: ["npm"],
+      matchPackageNames: [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+      ],
+    },
+  ],
+  regexManagers: [
+    // Node.js with asdf
+    {
+      fileMatch: ["^.tool-versions$"],
+      matchStrings: ["^nodejs (?<currentValue>.*)\\n"],
+      depNameTemplate: "nodejs/node",
+      versioningTemplate: "node",
+      datasourceTemplate: "node",
+    },
+  ],
 }

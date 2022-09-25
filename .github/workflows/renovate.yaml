@@ -1,0 +1,52 @@
+name: Renovate
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/renovate.yaml"
+      - "renovate.json5"
+  pull_request:
+    paths:
+      - ".github/workflows/renovate.yaml"
+      - "renovate.json5"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * FRI"
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@10693b3829bf86eb2572aef5f3571dcf5ca9287d # v2.2.2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - uses: cybozu/octoken-action@v1
+        id: iat
+        with:
+          github_app_id: ${{ secrets.RENOVATE_APP_ID }}
+          github_app_private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+
+      - name: Run self-hosted Renovate
+        env:
+          # Output debug log in GitHub Actions when debug mode is enabled or on branches other than main
+          LOG_LEVEL: ${{ (secrets.ACTIONS_STEP_DEBUG == 'true' || github.ref_name != 'main') && 'debug' || 'info' }}
+          # GitHub App configuration
+          RENOVATE_USERNAME: "${{ secrets.RENOVATE_APP_NAME }}[bot]"
+          RENOVATE_TOKEN: ${{ steps.iat.outputs.token }}
+          RENOVATE_GIT_AUTHOR: "${{ secrets.RENOVATE_APP_ID }}+${{ secrets.RENOVATE_APP_NAME }}[bot]@users.noreply.github.com"
+          # Switching processing by branch
+          RENOVATE_BASE_BRANCHES: "${{ github.ref_name }}"
+          RENOVATE_USE_BASE_BRANCH_CONFIG: "${{ github.ref_name == 'main' && 'none' || 'merge' }}"
+          RENOVATE_DRY_RUN: ${{ github.ref_name == 'main' && 'null' || 'full' }}
+        run: |
+          ./node_modules/.bin/renovate "${{ github.repository }}"
