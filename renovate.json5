@@ -4,8 +4,6 @@
   labels: ["renovate", "dependencies"],
   lockFileMaintenance: {
     enabled: true,
-    // When using Renovate for GitHub, the server is busy on the first day of the month.
-    schedule: ["before 5am on the 15th day of the month"],
   },
   packageRules: [
     {

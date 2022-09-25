@@ -1,0 +1,13 @@
+name: Renovate (skipped)
+
+on:
+  pull_request:
+    paths-ignore:
+      - ".github/workflows/renovate.yaml"
+      - "renovate.json5"
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No build required"'
