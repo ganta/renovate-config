@@ -4,6 +4,7 @@
   labels: ["renovate", "dependencies"],
   lockFileMaintenance: {
     enabled: true,
+    automerge: true,
   },
   automergeType: "branch",
   packageRules: [
