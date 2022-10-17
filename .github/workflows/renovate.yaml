@@ -45,7 +45,7 @@ jobs:
           RENOVATE_TOKEN: ${{ steps.iat.outputs.token }}
           RENOVATE_GIT_AUTHOR: "${{ secrets.RENOVATE_APP_ID }}+${{ secrets.RENOVATE_APP_NAME }}[bot]@users.noreply.github.com"
           # Switching processing by branch
-          RENOVATE_BASE_BRANCHES: "${{ github.ref_name }}"
+          RENOVATE_BASE_BRANCHES: "${{ github.head_ref || github.ref_name }}"
           RENOVATE_USE_BASE_BRANCH_CONFIG: "${{ github.ref_name == 'main' && 'none' || 'merge' }}"
           RENOVATE_DRY_RUN: ${{ github.ref_name == 'main' && 'null' || 'full' }}
         run: |

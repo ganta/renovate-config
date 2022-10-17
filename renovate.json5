@@ -5,10 +5,20 @@
   lockFileMaintenance: {
     enabled: true,
   },
+  automergeType: "branch",
   packageRules: [
+    // Renovate
     {
-      groupName: "React",
-      groupSlug: "react",
+      groupName: "Renovate",
+      groupSlug: "renovate",
+      matchManagers: ["npm"],
+      matchPackageNames: ["renovate"],
+      automerge: false,
+    },
+    // React.js
+    {
+      groupName: "React (Major)",
+      groupSlug: "react-major",
       matchManagers: ["npm"],
       matchPackageNames: [
         "react",
@@ -16,6 +26,26 @@
         "@types/react",
         "@types/react-dom",
       ],
+      matchUpdateTypes: ["major"],
+      automerge: false,
+    },
+    {
+      groupName: "React (Non major)",
+      groupSlug: "react-non-major",
+      matchManagers: ["npm"],
+      matchPackageNames: [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+      ],
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
+    },
+    // Non major updates
+    {
+      matchUpdateTypes: ["minor", "patch"],
+      automerge: true,
     },
   ],
   regexManagers: [
