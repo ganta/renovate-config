@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: pnpm/action-setup@10693b3829bf86eb2572aef5f3571dcf5ca9287d # v2.2.2
+      - uses: pnpm/action-setup@10693b3829bf86eb2572aef5f3571dcf5ca9287d # renovate: tag=v2.2.2
 
       - uses: actions/setup-node@v3
         with:
