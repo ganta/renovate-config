@@ -16,6 +16,11 @@
       matchPackageNames: ["renovate"],
       automerge: false,
     },
+    // GitHub Action
+    {
+      matchDepTypes: ["action"],
+      automerge: false,
+    },
     // React.js
     {
       groupName: "React (Major)",
