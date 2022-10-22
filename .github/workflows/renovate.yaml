@@ -13,7 +13,7 @@ on:
       - "renovate.json5"
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * FRI"
+    - cron: "15 * * * *" # Avoid exactly 0 minutes because of congestion.
 
 env:
   RENOVATE_APP_EMAIL: 113839177+ganta-renovate[bot]@users.noreply.github.com
