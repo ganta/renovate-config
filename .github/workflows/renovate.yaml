@@ -15,6 +15,9 @@ on:
   schedule:
     - cron: "0 0 * * FRI"
 
+env:
+  RENOVATE_APP_EMAIL: 113839177+ganta-renovate[bot]@users.noreply.github.com
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -43,7 +46,7 @@ jobs:
           # GitHub App configuration
           RENOVATE_USERNAME: "${{ secrets.RENOVATE_APP_NAME }}[bot]"
           RENOVATE_TOKEN: ${{ steps.iat.outputs.token }}
-          RENOVATE_GIT_AUTHOR: "${{ secrets.RENOVATE_APP_ID }}+${{ secrets.RENOVATE_APP_NAME }}[bot]@users.noreply.github.com"
+          RENOVATE_GIT_AUTHOR: "${{ env.RENOVATE_APP_EMAIL }}"
           # Switching processing by branch
           RENOVATE_BASE_BRANCHES: "${{ github.head_ref || github.ref_name }}"
           RENOVATE_USE_BASE_BRANCH_CONFIG: "${{ github.ref_name == 'main' && 'none' || 'merge' }}"
