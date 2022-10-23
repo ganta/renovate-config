@@ -1,6 +1,13 @@
 name: Renovate (skipped)
 
 on:
+  push:
+    branches:
+      - "renovate/**"
+    paths-ignore:
+      - ".github/workflows/renovate.yaml"
+      - "renovate.json5"
+      - "pnpm-lock.yaml"
   pull_request:
     paths-ignore:
       - ".github/workflows/renovate.yaml"
