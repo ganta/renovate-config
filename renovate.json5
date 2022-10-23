@@ -5,8 +5,8 @@
   lockFileMaintenance: {
     enabled: true,
     automerge: true,
+    automergeType: "branch",
   },
-  automergeType: "branch",
   packageRules: [
     // Renovate
     {
@@ -14,12 +14,6 @@
       groupSlug: "renovate",
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      automerge: false,
-    },
-    // GitHub Action
-    {
-      matchDepTypes: ["action"],
-      automerge: false,
     },
     // React.js
     {
@@ -33,7 +27,6 @@
         "@types/react-dom",
       ],
       matchUpdateTypes: ["major"],
-      automerge: false,
     },
     {
       groupName: "React (Non major)",
@@ -47,11 +40,14 @@
       ],
       matchUpdateTypes: ["minor", "patch"],
       automerge: true,
+      automergeType: "branch",
     },
-    // Non major updates
+    // Non major updates of Node.js
     {
+      matchManagers: ["npm"],
       matchUpdateTypes: ["minor", "patch"],
       automerge: true,
+      automergeType: "branch",
     },
   ],
   regexManagers: [

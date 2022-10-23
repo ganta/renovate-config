@@ -5,6 +5,7 @@ on:
     paths-ignore:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
+      - "pnpm-lock.yaml"
 
 jobs:
   renovate:
