@@ -28,6 +28,7 @@
         "@types/react-dom",
       ],
       matchUpdateTypes: ["major"],
+      automerge: false,
     },
     {
       groupName: "React (Non major)",
