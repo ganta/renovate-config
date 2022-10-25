@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 33.2.4
+  renovate: 34.1.2
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 33.2.4
+  renovate: 34.1.2
 
 packages:
 
@@ -4211,6 +4211,11 @@ packages:
       p-timeout: 3.2.0
     dev: true
 
+  /p-throttle/4.1.1:
+    resolution: {integrity: sha512-TuU8Ato+pRTPJoDzYD4s7ocJYcNSEZRvlxoq3hcPI2kZDZ49IQ1Wkj7/gDJc3X7XiEAAvRGtDzdXJI0tC3IL1g==}
+    engines: {node: '>=10'}
+    dev: true
+
   /p-timeout/3.2.0:
     resolution: {integrity: sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==}
     engines: {node: '>=8'}
@@ -4551,8 +4556,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/33.2.4:
-    resolution: {integrity: sha512-+E1WsDAw53d8exsAvPEoy9Zbslf9J0gyx0gjIMquK4IbBxO0ZczOAffk3aQsRnLOC9lBP//t3xVJFNqZmkHSMg==}
+  /renovate/34.1.2:
+    resolution: {integrity: sha512-whNq2l0LwqkLtTWSIna9f9B/HU0gOcV1lv8T7s4y82gf9fjtrReYq6UN21oEQCg4pesdkyvGVwFhHOcmBpEi/A==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4635,6 +4640,7 @@ packages:
       p-all: 3.0.0
       p-map: 4.0.0
       p-queue: 6.6.2
+      p-throttle: 4.1.1
       parse-link-header: 2.0.0
       prettier: 2.7.1
       quick-lru: 5.1.1
