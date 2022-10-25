@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 33.2.2
+  renovate: 33.2.4
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 33.2.2
+  renovate: 33.2.4
 
 packages:
 
@@ -4551,8 +4551,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/33.2.2:
-    resolution: {integrity: sha512-HozrsgWePlDdgPE279CjLquEyG0TklMilbR0R8BGD4Cj8iBCj3wKeQYQ2BRJy6dz3gNfA3CTfSCDC+nQ8Xg6TA==}
+  /renovate/33.2.4:
+    resolution: {integrity: sha512-+E1WsDAw53d8exsAvPEoy9Zbslf9J0gyx0gjIMquK4IbBxO0ZczOAffk3aQsRnLOC9lBP//t3xVJFNqZmkHSMg==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
