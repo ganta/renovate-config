@@ -14,7 +14,7 @@
       groupSlug: "renovate",
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      matchUpdateTypes: ["major", "minor", "patch"],
+      automerge: false,
     },
     // React.js
     {
