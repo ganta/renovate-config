@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 34.1.3
+  renovate: 34.1.4
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 34.1.3
+  renovate: 34.1.4
 
 packages:
 
@@ -3026,13 +3026,13 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /good-enough-parser/1.1.19:
-    resolution: {integrity: sha512-O1sdiXjZocP8gFYi5yMJ1kNGTJi9aV563Pjvo6UwOln3+IE+l6bshHqlKYdEM63Pof1KIqPCPKhNzkDPxNoFpw==}
+  /good-enough-parser/1.1.20:
+    resolution: {integrity: sha512-jjdRPD2sjI+WP6/nyOSuj/oTWbiW3lyms+otTk27M5pCo5nJOXo3cSiwtPfzr1bdfcd2+B3CrZJnMzC7xPFhLg==}
     dependencies:
       '@thi.ng/zipper': 1.0.3
       '@types/moo': 0.5.5
       klona: 2.0.5
-      moo: 0.5.1
+      moo: 0.5.2
     dev: true
 
   /got/11.8.5:
@@ -3929,10 +3929,6 @@ packages:
     dev: true
     optional: true
 
-  /moo/0.5.1:
-    resolution: {integrity: sha512-I1mnb5xn4fO80BH9BLcF0yLypy2UKl+Cb01Fu0hJRkJjlCRtxZMWkTdAtDd5ZqCOxtCkhmRwyI57vWT+1iZ67w==}
-    dev: true
-
   /moo/0.5.2:
     resolution: {integrity: sha512-iSAJLHYKnX41mKcJKjqvnAN9sf0LMDTXDEvFv+ffuRR9a1MIuXLjMNL6EsnDHSkKLTWNqQQ5uo61P4EbU4NU+Q==}
     dev: true
@@ -4556,8 +4552,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/34.1.3:
-    resolution: {integrity: sha512-AFnhJ2iATI5rQYvN+KaYDDHeypaHPB0diUrnPhZWrx3ZUAO/zAaEOJIi66gttr1BZqObjrYiRw/Z7YHV8oZcUw==}
+  /renovate/34.1.4:
+    resolution: {integrity: sha512-7110Bu0ZdlD/X0FyY7AbXW87iG65CeKlUYS5oav3khoZClki8GIS6mnhPxFBrhcq3fS0W7Z7Ec/5buiRxtWaNg==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4617,7 +4613,7 @@ packages:
       git-url-parse: 13.1.0
       github-url-from-git: 1.5.0
       global-agent: 3.0.0
-      good-enough-parser: 1.1.19
+      good-enough-parser: 1.1.20
       got: 11.8.5
       graph-data-structure: 2.0.0
       handlebars: 4.7.7
