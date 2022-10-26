@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 34.1.4
+  renovate: 34.1.5
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.7.1
-  renovate: 34.1.4
+  renovate: 34.1.5
 
 packages:
 
@@ -1378,8 +1378,8 @@ packages:
       '@octokit/openapi-types': 14.0.0
     dev: true
 
-  /@one-ini/wasm/0.1.0:
-    resolution: {integrity: sha512-cP8ZX+YBxw7SykvcX1NNKSia7ByE+PQTLZcRcEuuHsGJL+Zzuid+LSU1gC6QS1Ll3GTdE7z1/+JR5MYeMQkLBQ==}
+  /@one-ini/wasm/0.1.1:
+    resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
     dev: true
 
   /@opentelemetry/api-metrics/0.32.0:
@@ -2610,12 +2610,12 @@ packages:
     dev: true
     optional: true
 
-  /editorconfig/1.0.0:
-    resolution: {integrity: sha512-kep0YWCniNr1Z/pkavbAQ3yRQRTkaO+xJBiZPWwObnsS8dlo4C14onTf35IpPtR1nM8bqgDF9XVscDY7QwVEng==}
+  /editorconfig/1.0.1:
+    resolution: {integrity: sha512-QKhz+SCEjJ6JpIK4Ve64KpSZs8ZIoIkd2qWbhfrVrwbIh60+uVV70QDh3FYcZrhwJwQ+m9UdrOMSbGe/Osxiew==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
-      '@one-ini/wasm': 0.1.0
+      '@one-ini/wasm': 0.1.1
       commander: 9.4.1
       minimatch: 5.1.0
       semver: 7.3.8
@@ -4552,8 +4552,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/34.1.4:
-    resolution: {integrity: sha512-7110Bu0ZdlD/X0FyY7AbXW87iG65CeKlUYS5oav3khoZClki8GIS6mnhPxFBrhcq3fS0W7Z7Ec/5buiRxtWaNg==}
+  /renovate/34.1.5:
+    resolution: {integrity: sha512-lizPBOBDX1vyqWHFRDKfSVTyK9q06hYnpWB5vbz3Qr2jbxvl6UzRRNbI/wZMMhgGdnFmKwJTq02xZT/AZbnp9g==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4601,7 +4601,7 @@ packages:
       delay: 5.0.0
       dequal: 2.0.3
       detect-indent: 6.1.0
-      editorconfig: 1.0.0
+      editorconfig: 1.0.1
       email-addresses: 5.0.0
       emoji-regex: 10.2.1
       emojibase: 6.1.0
