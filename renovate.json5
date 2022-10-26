@@ -8,45 +8,29 @@
     automergeType: "branch",
   },
   packageRules: [
-    // Renovate
-    {
-      groupName: "Renovate",
-      groupSlug: "renovate",
-      matchManagers: ["npm"],
-      matchPackageNames: ["renovate"],
-      automerge: false,
-    },
-    // React.js
-    {
-      groupName: "React (Major)",
-      groupSlug: "react-major",
-      matchManagers: ["npm"],
-      matchPackageNames: [
-        "react",
-        "react-dom",
-        "@types/react",
-        "@types/react-dom",
-      ],
-      matchUpdateTypes: ["major"],
-      automerge: false,
-    },
-    {
-      groupName: "React (Non major)",
-      groupSlug: "react-non-major",
-      matchManagers: ["npm"],
-      matchPackageNames: [
-        "react",
-        "react-dom",
-        "@types/react",
-        "@types/react-dom",
-      ],
-      matchUpdateTypes: ["minor", "patch"],
-      automerge: true,
-      automergeType: "branch",
-    },
     // Non major updates of Node.js
     {
       matchManagers: ["npm"],
+      matchUpdateTypes: ["minor", "patch"],
+      excludePackageNames: ["renovate"],
+      automerge: true,
+      automergeType: "branch",
+    },
+    // React.js
+    {
+      groupName: "React",
+      groupSlug: "reactjs",
+      matchManagers: ["npm"],
+      matchPackageNames: [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom",
+      ],
+    },
+    // .node-version
+    {
+      matchManagers: ["nodenv"],
       matchUpdateTypes: ["minor", "patch"],
       automerge: true,
       automergeType: "branch",
