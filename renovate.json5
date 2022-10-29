@@ -36,14 +36,4 @@
       automergeType: "branch",
     },
   ],
-  regexManagers: [
-    // Node.js with asdf
-    {
-      fileMatch: ["^.tool-versions$"],
-      matchStrings: ["^nodejs (?<currentValue>.*)\\n"],
-      depNameTemplate: "nodejs/node",
-      versioningTemplate: "node",
-      datasourceTemplate: "node",
-    },
-  ],
 }
