@@ -24,21 +24,56 @@ env:
   RENOVATE_APP_EMAIL: 113839177+ganta-renovate[bot]@users.noreply.github.com
 
 jobs:
-  renovate:
+  get-target:
+    outputs:
+      repositories: ${{ steps.target.outputs.repositories }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Get Installation Access Token
+        uses: cybozu/octoken-action@v1
+        id: iat
+        with:
+          github_app_id: ${{ env.RENOVATE_APP_ID }}
+          github_app_private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
 
-      - uses: pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd # tag=v2.2.4
+      - name: Get the target repositories
+        id: target
+        env:
+          GH_TOKEN: ${{ steps.iat.outputs.token }}
+        run: |
+          printf "repositories=" >> "${GITHUB_OUTPUT}"
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            --paginate \
+            /installation/repositories \
+          | jq '.repositories[].full_name' \
+          | jq --slurp --compact-output >> "${GITHUB_OUTPUT}"
 
-      - uses: actions/setup-node@v3
+  renovate:
+    needs: [get-target]
+    strategy:
+      matrix:
+        repository: ${{ fromJSON(needs.get-target.outputs.repositories) }}
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd # tag=v2.2.4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version-file: .node-version
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
+      - name: Install Node modules
+        run: pnpm install --frozen-lockfile
 
-      - uses: cybozu/octoken-action@v1
+      - name: Get Installation Access Token
+        uses: cybozu/octoken-action@v1
         id: iat
         with:
           github_app_id: ${{ env.RENOVATE_APP_ID }}
@@ -53,8 +88,15 @@ jobs:
           RENOVATE_TOKEN: ${{ steps.iat.outputs.token }}
           RENOVATE_GIT_AUTHOR: "${{ env.RENOVATE_APP_EMAIL }}"
           # Switching processing by branch
-          RENOVATE_BASE_BRANCHES: "${{ github.head_ref || github.ref_name }}"
-          RENOVATE_USE_BASE_BRANCH_CONFIG: "${{ github.ref_name == 'main' && 'none' || 'merge' }}"
           RENOVATE_DRY_RUN: ${{ github.ref_name == 'main' && 'null' || 'full' }}
         run: |
-          ./node_modules/.bin/renovate "${{ github.repository }}"
+          # If it is not the main branch, perform a dry run with that branch's configuration.
+          # Note that the branch configuration is merged with the default ones and does not replace them.
+          # cf. https://docs.renovatebot.com/configuration-options/#usebasebranchconfig
+          if [[ "${{ matrix.repository }}" == "${{ github.repository }}" && "${{ github.ref_name }}" != "main" ]]
+          then
+            export RENOVATE_BASE_BRANCHES="${{ github.head_ref || github.ref_name }}"
+            export RENOVATE_USE_BASE_BRANCH_CONFIG="merge"
+          fi
+
+          ./node_modules/.bin/renovate "${{ matrix.repository }}"
