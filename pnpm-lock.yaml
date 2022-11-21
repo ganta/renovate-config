@@ -1891,12 +1891,12 @@ packages:
       '@arcanis/slice-ansi': 1.1.1
       '@types/semver': 7.3.13
       '@types/treeify': 1.0.0
-      '@yarnpkg/fslib': 2.8.0
+      '@yarnpkg/fslib': 2.9.0
       '@yarnpkg/json-proxy': 2.1.1
       '@yarnpkg/libzip': 2.2.4
       '@yarnpkg/parsers': 2.5.1
-      '@yarnpkg/pnp': 3.2.4
-      '@yarnpkg/shell': 3.2.4
+      '@yarnpkg/pnp': 3.2.5
+      '@yarnpkg/shell': 3.2.5
       camelcase: 5.3.1
       chalk: 3.0.0
       ci-info: 3.6.1
@@ -1922,8 +1922,8 @@ packages:
       tunnel: 0.0.6
     dev: true
 
-  /@yarnpkg/fslib/2.8.0:
-    resolution: {integrity: sha512-Goo8vFEVfVLdumceSd/K7p4Em5lqo8/PSvXE56XOrkaXmp1hQfjHcKtgtFO3UsVhq2JgM7MChQigDQLPXTCvzw==}
+  /@yarnpkg/fslib/2.9.0:
+    resolution: {integrity: sha512-PIdwI2z1HFl6aUkketbgUJK3FGRVWVwH1vgHltNe+snJzjlKHMavyIR0fipkAJuHVcac+hzWI1/eMr90rVyMHw==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     dependencies:
       '@yarnpkg/libzip': 2.2.4
@@ -1934,7 +1934,7 @@ packages:
     resolution: {integrity: sha512-meUiCAgCYpXTH1qJfqfz+dX013ohW9p2dKfwIzUYAFutH+lsz1eHPBIk72cuCV84adh9gX6j66ekBKH/bIhCQw==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     dependencies:
-      '@yarnpkg/fslib': 2.8.0
+      '@yarnpkg/fslib': 2.9.0
       tslib: 1.14.1
     dev: true
 
@@ -1954,20 +1954,20 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@yarnpkg/pnp/3.2.4:
-    resolution: {integrity: sha512-ucQb6W/wm5civ9fPWWB06DWcd3Qqw/fm48dyMMO4YVF87dIbJpKP2uI2IqNWQbul2GaM63efIb2sk3kf7MAHtg==}
+  /@yarnpkg/pnp/3.2.5:
+    resolution: {integrity: sha512-9TIy6BSJ0pu2Yj7KBG+CW4dnWijOdKZ8VO7yEC7fuL63I98oZHxuS9AcVSCNqNdrX8eZKxvSLtWgOaiGL0Eizw==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     dependencies:
       '@types/node': 13.13.52
-      '@yarnpkg/fslib': 2.8.0
+      '@yarnpkg/fslib': 2.9.0
     dev: true
 
-  /@yarnpkg/shell/3.2.4:
-    resolution: {integrity: sha512-mCxB1N+onHynM2zcuvdb73y1njzqxKnpIu6hy+eFyxC6qyPDTT17w5gCdGDHWCs025I95jk2vPWbzhXJBiCEHw==}
+  /@yarnpkg/shell/3.2.5:
+    resolution: {integrity: sha512-QLQNDgUatiXWs47ULRAyliFt4/gQbGwprvgBVRF9OJw0aNY1DO7rnmebB3wDg927uy4Oj1uKVRfGAGAgAVQHWg==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     hasBin: true
     dependencies:
-      '@yarnpkg/fslib': 2.8.0
+      '@yarnpkg/fslib': 2.9.0
       '@yarnpkg/parsers': 2.5.1
       chalk: 3.0.0
       clipanion: 3.2.0-rc.4
