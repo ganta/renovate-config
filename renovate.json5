@@ -16,6 +16,12 @@
       automerge: true,
       automergeType: "branch",
     },
+    // Renovate
+    {
+      matchManagers: ["npm"],
+      matchPackageNames: ["renovate"],
+      schedule: ["every weekend"],
+    },
     // React.js
     {
       groupName: "React",
