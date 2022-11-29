@@ -16,6 +16,9 @@ on:
 
 jobs:
   renovate:
+    strategy:
+      matrix:
+        repository: ["${{ github.repository }}"]
     runs-on: ubuntu-latest
     steps:
       - run: 'echo "No build required"'
