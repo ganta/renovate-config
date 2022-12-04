@@ -32,6 +32,7 @@
         "react-dom",
         "@types/react",
         "@types/react-dom",
+        "@testing-library/react",
       ],
     },
     // .node-version
