@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.8.1
-  renovate: 34.61.0
+  renovate: 34.63.2
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.8.1
-  renovate: 34.61.0
+  renovate: 34.63.2
 
 packages:
 
@@ -4505,8 +4505,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /re2/1.17.8:
-    resolution: {integrity: sha512-KM5zYGb1BlPPU8xLq9kkxwMq2wntoluIbjELcPSRS32hxgJqked3ahmtzu6vY1SMqjxHfutStF2b3KuRjcJHHg==}
+  /re2/1.18.0:
+    resolution: {integrity: sha512-MoCYZlJ9YUgksND9asyNF2/x532daXU/ARp1UeJbQ5flMY6ryKNEhrWt85aw3YluzOJlC3vXpGgK2a1jb0b4GA==}
     requiresBuild: true
     dependencies:
       install-artifact-from-github: 1.3.2
@@ -4639,8 +4639,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/34.61.0:
-    resolution: {integrity: sha512-pU/i1VduoOMShyIHINVzCL/5zWZcH0EVPR2GR5Xqin5adtFMpJ8zUVkKJL863AkHbbIOPcJZZZe/gf3KR33xnA==}
+  /renovate/34.63.2:
+    resolution: {integrity: sha512-gyBWx1XFukv8QemVg+RGCzZhCEr/xjcu+iNXw2JeBZkT/BQ8CQF4drpn3KtW0y6edYG/LpLRdiw72cmjJVT0RA==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4743,9 +4743,9 @@ packages:
       url-join: 4.0.1
       validate-npm-package-name: 5.0.0
       xmldoc: 1.2.0
-      zod: 3.19.1
+      zod: 3.20.0
     optionalDependencies:
-      re2: 1.17.8
+      re2: 1.18.0
     transitivePeerDependencies:
       - '@aws-sdk/signature-v4-crt'
       - aws-crt
@@ -5593,8 +5593,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zod/3.19.1:
-    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
+  /zod/3.20.0:
+    resolution: {integrity: sha512-ZWxs7oM5ixoo1BMoxTNeDMYSih/F/FUnExsnRtHT04rG6q0Bd74TKS45RGXw07TOalOZyyzdKaYH38k8yTEv9A==}
     dev: true
 
   /zwitch/1.0.5:
