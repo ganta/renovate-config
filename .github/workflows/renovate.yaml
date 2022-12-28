@@ -90,13 +90,12 @@ jobs:
           # Switching processing by branch
           RENOVATE_DRY_RUN: ${{ github.ref_name == 'main' && 'null' || 'full' }}
         run: |
-          # If it is not the main branch, perform a dry run with that branch's configuration.
-          # Note that the branch configuration is merged with the default ones and does not replace them.
-          # cf. https://docs.renovatebot.com/configuration-options/#usebasebranchconfig
-          if [[ "${{ matrix.repository }}" == "${{ github.repository }}" && "${{ github.ref_name }}" != "main" ]]
+          if [[ ${RENOVATE_DRY_RUN} != "null" ]]
           then
-            export RENOVATE_BASE_BRANCHES="${{ github.head_ref || github.ref_name }}"
-            export RENOVATE_USE_BASE_BRANCH_CONFIG="merge"
+            # Do not load main branch configuration
+            export RENOVATE_CONFIG_FILE="renovate.json5"
+            # Use current branch configuration
+            export RENOVATE_REQUIRE_CONFIG="ignored"
           fi
 
           ./node_modules/.bin/renovate "${{ matrix.repository }}"
