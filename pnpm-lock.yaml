@@ -3,12 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   npm-run-all: 4.1.5
   prettier: 2.8.1
-  renovate: 34.73.1
+  renovate: 34.80.0
 
 devDependencies:
   npm-run-all: 4.1.5
   prettier: 2.8.1
-  renovate: 34.73.1
+  renovate: 34.80.0
 
 packages:
 
@@ -1668,7 +1668,7 @@ packages:
       '@pnpm/write-project-manifest': 4.1.1
       fast-deep-equal: 3.1.3
       is-windows: 1.0.2
-      json5: 2.2.2
+      json5: 2.2.3
       parse-json: 5.2.0
       read-yaml-file: 2.1.0
       sort-keys: 4.2.0
@@ -1698,7 +1698,7 @@ packages:
     dependencies:
       '@pnpm/text.comments-parser': 1.0.0
       '@pnpm/types': 8.9.0
-      json5: 2.2.2
+      json5: 2.2.3
       write-file-atomic: 5.0.0
       write-yaml-file: 4.2.0
     dev: true
@@ -1758,12 +1758,12 @@ packages:
       '@seald-io/nedb': 3.1.0
     dev: true
 
-  /@renovatebot/osv-offline/1.0.8:
-    resolution: {integrity: sha512-oYryh9uttikbaYhcoiJn8DBMjgxbneu9NvVF5PnG7qrUDYr7KIrlxdOlo8vQ2iytT1qd8+VzOLDoJReu1EL1Ag==}
+  /@renovatebot/osv-offline/1.0.9:
+    resolution: {integrity: sha512-dZoKJT1QVpoN6F8v1S7mW0R1A+gDY5xA6xkdWpn6iuPxl1VazDdvrA/wNa5IYNUMH69ofI15f9oZwHSoiORaaw==}
     dependencies:
       '@octokit/rest': 19.0.5
       '@renovatebot/osv-offline-db': 1.0.1
-      adm-zip: 0.5.9
+      adm-zip: 0.5.10
       fs-extra: 10.1.0
       got: 11.8.6
       luxon: 3.1.1
@@ -1952,8 +1952,8 @@ packages:
     dev: true
     optional: true
 
-  /@yarnpkg/core/3.3.0:
-    resolution: {integrity: sha512-3fzbI038I42bArD8SJ8Riu7gwrJxKrCpj/13RVb7PBi1QP1wyxF/dUWIpqPyPqkuTOimL5ZvPcKnt4tc6SnRdw==}
+  /@yarnpkg/core/3.3.1:
+    resolution: {integrity: sha512-OigU50KuAGkxcLR/wYORNA8l6Z4LBxDu9qyW0XwWBycIRl7dDAdOOOjOfOEu1biJijlJpswACLiv/v8fOf7qJw==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     dependencies:
       '@arcanis/slice-ansi': 1.1.1
@@ -2051,8 +2051,8 @@ packages:
     dev: true
     optional: true
 
-  /adm-zip/0.5.9:
-    resolution: {integrity: sha512-s+3fXLkeeLjZ2kLjCBwQufpI5fuN+kIGBxu6530nVQZGVol0d7Y/M88/xw9HGGUcJjKf8LutN3VPRUBq6N7Ajg==}
+  /adm-zip/0.5.10:
+    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
     engines: {node: '>=6.0'}
     dev: true
 
@@ -3068,7 +3068,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.1.1
+      minimatch: 5.1.2
       once: 1.4.0
     dev: true
 
@@ -3098,7 +3098,7 @@ packages:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.2.12
-      ignore: 5.2.1
+      ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -3282,8 +3282,8 @@ packages:
     dev: true
     optional: true
 
-  /ignore/5.2.1:
-    resolution: {integrity: sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==}
+  /ignore/5.2.4:
+    resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
     dev: true
 
@@ -3605,8 +3605,8 @@ packages:
     resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
     dev: true
 
-  /json5/2.2.2:
-    resolution: {integrity: sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==}
+  /json5/2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
     dev: true
@@ -3920,8 +3920,8 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
-  /minimatch/5.1.1:
-    resolution: {integrity: sha512-362NP+zlprccbEt/SkxKfRMHnNY85V74mVnpUpNyr3F35covl09Kec7/sEFLt3RA4oXmewtoaanoIf67SE5Y5g==}
+  /minimatch/5.1.2:
+    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
@@ -4650,8 +4650,8 @@ packages:
       - supports-color
     dev: true
 
-  /renovate/34.73.1:
-    resolution: {integrity: sha512-b29efxTGvQvfnZrowoPe9GFeDiIfYw/sOHV6X4imP5UKwHuUCbOZCucXgbjC0hp191N7ag5AZQ40PZr7bWXM3w==}
+  /renovate/34.80.0:
+    resolution: {integrity: sha512-pduq6Ut0rqT22BIDMkg9cslVteuqImZ1ubY7TYr40mFOfN+ZTetrmFR/hWxyF/jcrnqRnm44F3cnjSdgU69rKA==}
     engines: {node: ^14.15.0 || >=16.13.0, yarn: ^1.17.0}
     hasBin: true
     dependencies:
@@ -4674,12 +4674,12 @@ packages:
       '@opentelemetry/sdk-trace-base': 1.8.0_@opentelemetry+api@1.3.0
       '@opentelemetry/sdk-trace-node': 1.8.0_@opentelemetry+api@1.3.0
       '@opentelemetry/semantic-conventions': 1.8.0
-      '@renovatebot/osv-offline': 1.0.8
+      '@renovatebot/osv-offline': 1.0.9
       '@renovatebot/pep440': 2.1.6
       '@renovatebot/ruby-semver': 1.1.7
       '@sindresorhus/is': 4.6.0
       '@types/tmp': 0.2.3
-      '@yarnpkg/core': 3.3.0
+      '@yarnpkg/core': 3.3.1
       '@yarnpkg/parsers': 2.5.1
       agentkeepalive: 4.2.1
       aggregate-error: 3.1.0
@@ -4716,17 +4716,17 @@ packages:
       graph-data-structure: 2.0.0
       handlebars: 4.7.7
       hasha: 5.2.2
-      ignore: 5.2.1
+      ignore: 5.2.4
       ini: 3.0.1
       js-yaml: 4.1.0
       json-dup-key-validator: 1.0.3
       json-stringify-pretty-compact: 3.0.0
-      json5: 2.2.2
+      json5: 2.2.3
       luxon: 3.1.1
       markdown-it: 13.0.1
       markdown-table: 2.0.0
       marshal: 0.5.4
-      minimatch: 5.1.1
+      minimatch: 5.1.2
       moo: 0.5.2
       nanoid: 3.3.4
       node-html-parser: 6.1.4
