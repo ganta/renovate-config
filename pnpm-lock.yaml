@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   npm-run-all: 4.1.5
-  prettier: 2.8.1
+  prettier: 2.8.2
   renovate: 34.80.0
 
 devDependencies:
   npm-run-all: 4.1.5
-  prettier: 2.8.1
+  prettier: 2.8.2
   renovate: 34.80.0
 
 packages:
@@ -4432,6 +4432,12 @@ packages:
 
   /prettier/2.8.1:
     resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.8.2:
+    resolution: {integrity: sha512-BtRV9BcncDyI2tsuS19zzhzoxD8Dh8LiCx7j7tHzrkz8GFXAexeWFdi22mjE1d16dftH2qNaytVxqiRTGlMfpw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
