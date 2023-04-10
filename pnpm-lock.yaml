@@ -1284,7 +1284,7 @@ packages:
     resolution: {integrity: sha512-TDD4UJzos3JJtM+tHX+w2Uc+KWj7GV+VKKFdMVd2Rx8sdA19hcc3P3AHFYd5LVOw+pYuSd5lICC3gm52B6Rwxw==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      core-js-pure: 3.29.1
+      core-js-pure: 3.30.0
       regenerator-runtime: 0.13.11
     dev: true
 
@@ -2344,13 +2344,13 @@ packages:
       fs-minipass: 3.0.1
       glob: 8.1.0
       lru-cache: 7.18.3
-      minipass: 4.2.5
+      minipass: 4.2.7
       minipass-collect: 1.0.2
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
       p-map: 4.0.0
       promise-inflight: 1.0.1
-      ssri: 10.0.1
+      ssri: 10.0.2
       tar: 6.1.13
       unique-filename: 3.0.0
     transitivePeerDependencies:
@@ -2533,8 +2533,8 @@ packages:
       through2-concurrent: 2.0.0
     dev: true
 
-  /core-js-pure/3.29.1:
-    resolution: {integrity: sha512-4En6zYVi0i0XlXHVz/bi6l1XDjCqkKRq765NXuX+SnaIatlE96Odt5lMLjdxUiNI1v9OXI5DSLWYPlmTfkTktg==}
+  /core-js-pure/3.30.0:
+    resolution: {integrity: sha512-+2KbMFGeBU0ln/csoPqTe0i/yfHbrd2EUhNMObsGtXMKS/RTtlkYyi+/3twLcevbgNR0yM/r0Psa3TEoQRpFMQ==}
     requiresBuild: true
     dev: true
 
@@ -2993,7 +2993,7 @@ packages:
     resolution: {integrity: sha512-MhaJDcFRTuLidHrIttu0RDGyyXs/IYHVmlcxfLAEFIWjc1vdLAkdwT7Ace2u7DbitWC0toKMl5eJZRYNVreIMw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 4.2.5
+      minipass: 4.2.7
     dev: true
 
   /fs.realpath/1.0.0:
@@ -4055,8 +4055,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /minipass/4.2.5:
-    resolution: {integrity: sha512-+yQl7SX3bIT83Lhb4BVorMAHVuqsskxRdlmO9kTpyukp8vsm2Sn/fUOV9xlnG8/a5JsypJzap21lz/y3FBMJ8Q==}
+  /minipass/4.2.7:
+    resolution: {integrity: sha512-ScVIgqHcXRMyfflqHmEW0bm8z8rb5McHyOY3ewX9JBgZaR77G7nxq9L/mtV96/QbAAwtbCAHVVLzD1kkyfFQEw==}
     engines: {node: '>=8'}
     dev: true
 
@@ -4206,7 +4206,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.1
+      resolve: 1.22.2
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -4238,7 +4238,7 @@ packages:
       minimatch: 3.1.2
       pidtree: 0.3.1
       read-pkg: 3.0.0
-      shell-quote: 1.8.0
+      shell-quote: 1.8.1
       string.prototype.padend: 3.1.4
     dev: true
 
@@ -4856,7 +4856,7 @@ packages:
     dependencies:
       debug: 4.3.4
       module-details-from-path: 1.0.3
-      resolve: 1.22.1
+      resolve: 1.22.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4865,8 +4865,8 @@ packages:
     resolution: {integrity: sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==}
     dev: true
 
-  /resolve/1.22.1:
-    resolution: {integrity: sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==}
+  /resolve/1.22.2:
+    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
     hasBin: true
     dependencies:
       is-core-module: 2.11.0
@@ -5029,8 +5029,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /shell-quote/1.8.0:
-    resolution: {integrity: sha512-QHsz8GgQIGKlRi24yFc6a6lN69Idnx634w49ay6+jA5yFh7a1UY+4Rp6HPx/L/1zcEDPEij8cIsiqR6bQsE5VQ==}
+  /shell-quote/1.8.1:
+    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: true
 
   /shimmer/1.2.1:
@@ -5155,11 +5155,11 @@ packages:
     resolution: {integrity: sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==}
     dev: true
 
-  /ssri/10.0.1:
-    resolution: {integrity: sha512-WVy6di9DlPOeBWEjMScpNipeSX2jIZBGEn5Uuo8Q7aIuFEuDX0pw8RxcOjlD1TWP4obi24ki7m/13+nFpcbXrw==}
+  /ssri/10.0.2:
+    resolution: {integrity: sha512-LWMXUSh7fEfCXNBq4UnRzC4Qc5Y1PPg5ogmb+6HX837i2cKzjB133aYmQ4lgO0shVTcTQHquKp3v5bn898q3Sw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      minipass: 4.2.5
+      minipass: 4.2.7
     dev: true
 
   /ssri/9.0.1:
@@ -5302,7 +5302,7 @@ packages:
     dependencies:
       chownr: 2.0.0
       fs-minipass: 2.1.0
-      minipass: 4.2.5
+      minipass: 4.2.7
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
