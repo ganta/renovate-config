@@ -1,7 +1,7 @@
 {
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@7.33.0",
+  "packageManager": "pnpm@8.6.1",
   "scripts": {
     "lint": "run-s 'lint:*'",
     "lint:prettier": "prettier --check .",
