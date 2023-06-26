@@ -143,8 +143,8 @@ packages:
       '@aws-sdk/util-user-agent-browser': 3.347.0
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       tslib: 2.5.3
       uuid: 8.3.2
     transitivePeerDependencies:
@@ -190,8 +190,8 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
       '@aws-sdk/util-waiter': 3.347.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       fast-xml-parser: 4.2.4
       tslib: 2.5.3
       uuid: 8.3.2
@@ -237,8 +237,8 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
       '@aws-sdk/util-waiter': 3.347.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       tslib: 2.5.3
     transitivePeerDependencies:
       - aws-crt
@@ -282,8 +282,8 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
       '@aws-sdk/util-waiter': 3.347.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       fast-xml-parser: 4.2.4
       tslib: 2.5.3
     transitivePeerDependencies:
@@ -329,8 +329,8 @@ packages:
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
       '@aws-sdk/util-waiter': 3.347.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       fast-xml-parser: 4.2.4
       tslib: 2.5.3
     transitivePeerDependencies:
@@ -392,8 +392,8 @@ packages:
       '@aws-sdk/util-utf8': 3.310.0
       '@aws-sdk/util-waiter': 3.347.0
       '@aws-sdk/xml-builder': 3.310.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       fast-xml-parser: 4.2.4
       tslib: 2.5.3
     transitivePeerDependencies:
@@ -435,8 +435,8 @@ packages:
       '@aws-sdk/util-user-agent-browser': 3.347.0
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       tslib: 2.5.3
     transitivePeerDependencies:
       - aws-crt
@@ -476,8 +476,8 @@ packages:
       '@aws-sdk/util-user-agent-browser': 3.347.0
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       tslib: 2.5.3
     transitivePeerDependencies:
       - aws-crt
@@ -520,8 +520,8 @@ packages:
       '@aws-sdk/util-user-agent-browser': 3.347.0
       '@aws-sdk/util-user-agent-node': 3.347.0
       '@aws-sdk/util-utf8': 3.310.0
-      '@smithy/protocol-http': 1.0.1
-      '@smithy/types': 1.0.0
+      '@smithy/protocol-http': 1.1.0
+      '@smithy/types': 1.1.0
       fast-xml-parser: 4.2.4
       tslib: 2.5.3
     transitivePeerDependencies:
@@ -1874,16 +1874,16 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /@smithy/protocol-http@1.0.1:
-    resolution: {integrity: sha512-9OrEn0WfOVtBNYJUjUAn9AOiJ4lzERCJJ/JeZs8E6yajTGxBaFRxUnNBHiNqoDJVg076hY36UmEnPx7xXrvUSg==}
+  /@smithy/protocol-http@1.1.0:
+    resolution: {integrity: sha512-H5y/kZOqfJSqRkwtcAoVbqONmhdXwSgYNJ1Glk5Ry8qlhVVy5qUzD9EklaCH8/XLnoCsLO/F/Giee8MIvaBRkg==}
     engines: {node: '>=14.0.0'}
     dependencies:
-      '@smithy/types': 1.0.0
+      '@smithy/types': 1.1.0
       tslib: 2.5.3
     dev: true
 
-  /@smithy/types@1.0.0:
-    resolution: {integrity: sha512-kc1m5wPBHQCTixwuaOh9vnak/iJm21DrSf9UK6yDE5S3mQQ4u11pqAUiKWnlrZnYkeLfAI9UEHj9OaMT1v5Umg==}
+  /@smithy/types@1.1.0:
+    resolution: {integrity: sha512-KzmvisMmuwD2jZXuC9e65JrgsZM97y5NpDU7g347oB+Q+xQLU6hQZ5zFNNbEfwwOJHoOvEVTna+dk1h/lW7alw==}
     engines: {node: '>=14.0.0'}
     dependencies:
       tslib: 2.5.3
