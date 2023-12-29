@@ -5,7 +5,7 @@
   lockFileMaintenance: {
     enabled: true,
     automerge: true,
-    automergeType: "branch",
+    platformAutomerge: true,
   },
   packageRules: [
     // Non-major updates of Node.js
@@ -14,7 +14,7 @@
       matchUpdateTypes: ["minor", "patch"],
       excludePackageNames: ["renovate"],
       automerge: true,
-      automergeType: "branch",
+      platformAutomerge: true,
     },
     // Renovate
     {
@@ -40,7 +40,7 @@
       matchManagers: ["nodenv"],
       matchUpdateTypes: ["minor", "patch"],
       automerge: true,
-      automergeType: "branch",
+      platformAutomerge: true,
     },
   ],
 }
