@@ -21,7 +21,8 @@
     {
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      schedule: ["every weekend"],
+      minimumReleaseAge: "1 week",
+      automerge: true,
     },
     // React.js
     {
