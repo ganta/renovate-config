@@ -19,10 +19,23 @@
     },
     // Renovate
     {
+      groupName: "Renovate",
+      groupSlug: "renovate",
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      minimumReleaseAge: "1 week",
-      schedule: ["on Friday"],
+      matchUpdateTypes: ["major", "minor"],
+      minimumReleaseAge: "8 days",
+      internalChecksFilter: "strict",
+      automerge: true,
+    },
+    {
+      groupName: "Renovate",
+      groupSlug: "renovate",
+      matchManagers: ["npm"],
+      matchPackageNames: ["renovate"],
+      matchUpdateTypes: ["patch"],
+      minimumReleaseAge: "7 days",
+      internalChecksFilter: "none",
       automerge: true,
     },
     // React.js
