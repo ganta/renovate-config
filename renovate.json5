@@ -24,7 +24,7 @@
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
       matchUpdateTypes: ["major", "minor"],
-      minimumReleaseAge: "8 days",
+      minimumReleaseAge: "10 days",
       internalChecksFilter: "strict",
       automerge: true,
     },
