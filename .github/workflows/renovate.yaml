@@ -29,15 +29,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Installation Access Token
-        uses: cybozu/octoken-action@v1
-        id: iat
+        uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          github_app_id: ${{ env.RENOVATE_APP_ID }}
-          github_app_private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          app-id: ${{ env.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
       - name: Get the target repositories
         id: target
         env:
-          GH_TOKEN: ${{ steps.iat.outputs.token }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           printf "repositories=" >> "${GITHUB_OUTPUT}"
           gh api \
@@ -72,18 +72,18 @@ jobs:
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
       - name: Get Installation Access Token
-        uses: cybozu/octoken-action@v1
-        id: iat
+        uses: actions/create-github-app-token@v1
+        id: app-token
         with:
-          github_app_id: ${{ env.RENOVATE_APP_ID }}
-          github_app_private_key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          app-id: ${{ env.RENOVATE_APP_ID }}
+          private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
       - name: Run self-hosted Renovate
         env:
           # Output debug log in GitHub Actions when debug mode is enabled or on branches other than main
           LOG_LEVEL: ${{ (secrets.ACTIONS_STEP_DEBUG == 'true' || github.ref_name != 'main') && 'debug' || 'info' }}
           # GitHub App configuration
           RENOVATE_USERNAME: "${{ env.RENOVATE_APP_NAME }}[bot]"
-          RENOVATE_TOKEN: ${{ steps.iat.outputs.token }}
+          RENOVATE_TOKEN: ${{ steps.app-token.outputs.token }}
           RENOVATE_GIT_AUTHOR: "${{ env.RENOVATE_APP_EMAIL }}"
           # Switching processing by branch
           RENOVATE_DRY_RUN: ${{ github.ref_name == 'main' && 'null' || 'full' }}
