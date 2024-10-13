@@ -78,6 +78,7 @@ jobs:
         with:
           app-id: ${{ env.RENOVATE_APP_ID }}
           private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
       - name: Run self-hosted Renovate
         env:
           # Output debug log in GitHub Actions when debug mode is enabled or on branches other than main
