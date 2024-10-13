@@ -9,6 +9,7 @@
     platformAutomerge: true,
   },
   packageRules: [
+    // Non-major updates of Node.js
     {
       matchManagers: ["npm"],
       matchUpdateTypes: ["minor", "patch"],
@@ -16,6 +17,7 @@
       platformAutomerge: true,
       matchPackageNames: ["!renovate"],
     },
+    // Renovate
     {
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
@@ -23,6 +25,7 @@
       schedule: ["on Friday"],
       automerge: true,
     },
+    // React.js
     {
       groupName: "React",
       groupSlug: "reactjs",
@@ -35,6 +38,7 @@
         "@testing-library/react",
       ],
     },
+    // .node-version
     {
       matchManagers: ["nodenv"],
       matchUpdateTypes: ["minor", "patch"],
