@@ -13,9 +13,9 @@
     {
       matchManagers: ["npm"],
       matchUpdateTypes: ["minor", "patch"],
-      excludePackageNames: ["renovate"],
       automerge: true,
       platformAutomerge: true,
+      matchPackageNames: ["!renovate"],
     },
     // Renovate
     {
