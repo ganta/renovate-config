@@ -7,12 +7,14 @@ on:
     paths:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "pnpm-lock.yaml"
+      - "package-lock.json"
+      - ".node-version"
   pull_request:
     paths:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "pnpm-lock.yaml"
+      - "package-lock.json"
+      - ".node-version"
   workflow_dispatch:
   schedule:
     - cron: "15 * * * *" # Avoid exactly 0 minutes because of congestion.
