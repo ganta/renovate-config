@@ -38,6 +38,13 @@
         "@testing-library/react",
       ],
     },
+    // Chromatic
+    {
+      groupName: "Chromatic CLI",
+      groupSlug: "chromatic-cli",
+      matchManagers: ["npm", "github-actions"],
+      matchPackageNames: ["chromatic", "chromaui/action"],
+    },
     // .node-version
     {
       matchManagers: ["nodenv"],
