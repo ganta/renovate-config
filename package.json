@@ -9,6 +9,6 @@
   "devDependencies": {
     "npm-run-all2": "7.0.2",
     "prettier": "3.4.2",
-    "renovate": "39.128.0"
+    "renovate": "39.129.0"
   }
 }
