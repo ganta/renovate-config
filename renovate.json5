@@ -3,6 +3,7 @@
   extends: ["config:recommended"],
   labels: ["renovate", "dependencies"],
   configMigration: true,
+  timezone: "Asia/Tokyo",
   lockFileMaintenance: {
     enabled: true,
     automerge: true,
