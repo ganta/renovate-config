@@ -22,8 +22,8 @@
     {
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      minimumReleaseAge: "1 week",
-      schedule: ["on Friday"],
+      minimumReleaseAge: "2 weeks",
+      schedule: ["* 3-6 1,15 * *"], // Between 3:00 and 6:00 AM on the 1st and 15th of every month
       automerge: true,
     },
     // React.js
