@@ -8,6 +8,7 @@
     enabled: true,
     automerge: true,
     platformAutomerge: true,
+    minimumReleaseAge: "2 weeks",
   },
   packageRules: [
     // Non-major updates of Node.js
