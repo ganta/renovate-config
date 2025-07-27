@@ -18,6 +18,7 @@
       automerge: true,
       platformAutomerge: true,
       matchPackageNames: ["!renovate"],
+      minimumReleaseAge: "2 weeks",
     },
     // Renovate
     {
