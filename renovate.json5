@@ -4,11 +4,11 @@
   labels: ["renovate", "dependencies"],
   configMigration: true,
   timezone: "Asia/Tokyo",
+  minimumReleaseAge: "2 weeks",
   lockFileMaintenance: {
     enabled: true,
     automerge: true,
     platformAutomerge: true,
-    minimumReleaseAge: "2 weeks",
   },
   packageRules: [
     // Non-major updates of Node.js
@@ -18,13 +18,11 @@
       automerge: true,
       platformAutomerge: true,
       matchPackageNames: ["!renovate"],
-      minimumReleaseAge: "2 weeks",
     },
     // Renovate
     {
       matchManagers: ["npm"],
       matchPackageNames: ["renovate"],
-      minimumReleaseAge: "2 weeks",
       schedule: ["* 3-6 1,15 * *"], // Between 3:00 and 6:00 AM on the 1st and 15th of every month
       automerge: true,
     },
