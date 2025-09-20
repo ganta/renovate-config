@@ -19,6 +19,9 @@ on:
   schedule:
     - cron: "15 * * * *" # Avoid exactly 0 minutes because of congestion.
 
+permissions:
+  contents: read
+
 env:
   RENOVATE_APP_ID: 239200
   RENOVATE_APP_NAME: ganta-renovate
