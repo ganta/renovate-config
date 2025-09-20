@@ -7,13 +7,13 @@ on:
     paths-ignore:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "package-lock.json"
+      - "pnpm-lock.yaml"
       - ".node-version"
   pull_request:
     paths-ignore:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "package-lock.json"
+      - "pnpm-lock.yaml"
       - ".node-version"
 
 jobs:
