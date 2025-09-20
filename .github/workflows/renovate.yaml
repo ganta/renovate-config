@@ -7,13 +7,13 @@ on:
     paths:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "package-lock.json"
+      - "pnpm-lock.yaml"
       - ".node-version"
   pull_request:
     paths:
       - ".github/workflows/renovate.yaml"
       - "renovate.json5"
-      - "package-lock.json"
+      - "pnpm-lock.yaml"
       - ".node-version"
   workflow_dispatch:
   schedule:
@@ -37,6 +37,7 @@ jobs:
           app-id: ${{ env.RENOVATE_APP_ID }}
           private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
+
       - name: Get the target repositories
         id: target
         env:
@@ -60,20 +61,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
       - name: Setup Node.js
-        uses: actions/setup-node@v5
-        with:
-          node-version-file: .node-version
-      - name: Cache node_modules
-        id: cache-node-modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ runner.os }}-${{ hashFiles('.node-version') }}-${{ hashFiles('package-lock.json') }}
-          restore-keys: node-modules-${{ runner.os }}-${{ hashFiles('.node-version') }}-${{ hashFiles('package-lock.json') }}
-      - name: Install Node modules
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
-        run: npm ci
+        uses: ./.github/actions/setup-node
+
       - name: Get Installation Access Token
         uses: actions/create-github-app-token@v2
         id: app-token
@@ -81,6 +72,7 @@ jobs:
           app-id: ${{ env.RENOVATE_APP_ID }}
           private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
+
       - name: Run self-hosted Renovate
         env:
           # Output debug log in GitHub Actions when debug mode is enabled or on branches other than main
