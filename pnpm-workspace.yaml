@@ -1,1 +1,4 @@
 minimumReleaseAge: 1440
+
+overrides:
+  glob: ">= 11.1.0" # https://github.com/advisories/GHSA-5j98-mcp5-4vw2
