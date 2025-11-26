@@ -1,7 +1,7 @@
 {
   "private": true,
   "license": "MIT",
-  "packageManager": "pnpm@10.21.0",
+  "packageManager": "pnpm@10.22.0",
   "scripts": {
     "lint": "run-p --print-label 'lint:*'",
     "lint:prettier": "prettier --check .",
