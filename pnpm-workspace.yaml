@@ -3,3 +3,6 @@ minimumReleaseAge: 1440
 overrides:
   glob: ">= 11.1.0" # https://github.com/advisories/GHSA-5j98-mcp5-4vw2
   jws: ">= 4.0.1" # https://github.com/advisories/GHSA-869p-cjfg-cm3x
+minimumReleaseAgeExclude:
+  # Renovate security update: renovate@43.4.4
+  - renovate@43.4.4
