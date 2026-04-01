@@ -16,8 +16,6 @@ on:
       - "pnpm-lock.yaml"
       - ".node-version"
   workflow_dispatch:
-  schedule:
-    - cron: "15 * * * *" # Avoid exactly 0 minutes because of congestion.
 
 permissions:
   contents: read
